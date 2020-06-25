@@ -49,6 +49,7 @@ object Build : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true -DskipTests"
         }
         dockerCompose {
+            name = "DockerCompose"
             file = "docker-compose.yml"
         }
     }
