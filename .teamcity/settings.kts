@@ -38,6 +38,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "target/phonebook-0.0.1-SNAPSHOT.jar"
+
     vcs {
         root(HttpsGithubComMovshukPhonebookGitRefsHeadsMaster)
         root(DslContext.settingsRoot)
