@@ -61,6 +61,13 @@ object Build : BuildType({
         vcs {
         }
     }
+
+    dependencies {
+        artifacts(RelativeId("Build")) {
+            buildRule = lastSuccessful()
+            artifactRules = "phonebook-0.0.1-SNAPSHOT.jar"
+        }
+    }
 })
 
 object HttpsGithubComMovshukPhonebookGitRefsHeadsMaster : GitVcsRoot({
