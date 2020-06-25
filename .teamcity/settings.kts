@@ -46,7 +46,7 @@ object Build : BuildType({
     steps {
         maven {
             goals = "clean package"
-            runnerArgs = "-Dmaven.test.failure.ignore=true Dmaven.test.skip=true"
+            runnerArgs = "-Dmaven.test.failure.ignore=true -DskipTests"
         }
         dockerCompose {
             file = "docker-compose.yml"
