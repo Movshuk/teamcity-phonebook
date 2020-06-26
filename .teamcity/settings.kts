@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dockerCompose
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
@@ -50,10 +49,6 @@ object Build : BuildType({
             name = "MavenStep"
             goals = "clean package"
             runnerArgs = "-Dmaven.test.failure.ignore=true -DskipTests"
-        }
-        dockerCompose {
-            name = "DockerComposeStep"
-            file = "docker-compose.yml"
         }
     }
 
