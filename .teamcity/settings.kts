@@ -53,11 +53,11 @@ object Build : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true -DskipTests"
         }
         script {
-            name = "DockerCommandStep"
-            scriptContent = "docker-compose up --build"
+            scriptContent = "java -jar phonebook-0.0.1-SNAPSHOT.jar"
         }
         script {
-            scriptContent = "java -jar phonebook-0.0.1-SNAPSHOT.jar"
+            name = "DockerCommandStep"
+            scriptContent = "docker-compose up --build"
         }
     }
 
