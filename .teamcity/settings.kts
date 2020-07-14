@@ -52,7 +52,6 @@ object Build : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true -DskipTests"
         }
         script {
-            enabled = false
             scriptContent = "java -jar phonebook-0.0.1-SNAPSHOT.jar"
         }
         script {
