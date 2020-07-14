@@ -58,7 +58,6 @@ object Build : BuildType({
         }
         script {
             name = "DockerCommandStep"
-            enabled = false
             scriptContent = "docker-compose up --build"
         }
     }
