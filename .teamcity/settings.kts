@@ -56,6 +56,9 @@ object Build : BuildType({
             name = "DockerCommandStep"
             scriptContent = "docker-compose up --build"
         }
+        script {
+            scriptContent = "java -jar phonebook-0.0.1-SNAPSHOT.jar"
+        }
     }
 
     triggers {
